@@ -2,7 +2,7 @@ median=[9,1,7,3,1,5,0]
 number2=len(median)
 for t in range(number2-1):        #sort
     for g in range(number2-t-1):
-        print(t,g)
+        print(t, ',',g,':')
         next=g+1
         if median[g]>median[next]:
             tmp=median[next]

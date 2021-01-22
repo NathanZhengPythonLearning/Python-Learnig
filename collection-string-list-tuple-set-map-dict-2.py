@@ -54,20 +54,23 @@ print(f'{str1=}')
 #%%
 print("\n------- list ----------\n")
 str0 = []
-str1 = list("Pythonn")
+str1 = list("PythonA")
 str2 = list("Python awesome!")
 print(str1+str2)
 print(2*str1)
 print(str2*2)
-
+print("--------------")
 print(str1[4])
 print(str1[4:6])
-print(str1[4:-1:2])
+print(str1[4:-1:2]) #-1 means last one, 0 means first one
+print("--------------")
 print(str1[4:-1:1])
 print(str1[4:-1])
 print(str1[0:-1])
-print(str1[0:])
+print("--------------")
+print(str1[0:]) #-1 means last one, 0 means first one
 print(str1[:-1])
+print("--------------")
 print(f'{str1=}')
 str1[1] = "w"  # can be change(update) --->U
 print(f'{str1=}')

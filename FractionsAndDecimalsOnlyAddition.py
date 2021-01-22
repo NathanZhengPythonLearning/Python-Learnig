@@ -1,4 +1,4 @@
-chse=input("Please type Which form yo want our answer to be in(Fractions or Decimals): ")
+chse=input("Please type Which form you want our answer to be in(Fractions or Decimals): ")
 num=int(input("Please type the first number to the first fraction: "))
 num2=int(input("Please type the second number to the first fraction: "))
 num3=int(input("Please type the first number to the second fraction: "))
