@@ -4,11 +4,14 @@ print(f'{num=:#x} {num=:#b} {num=:#o}')
 print(f'{num=:#X} {num=:#%} {num=:#E}')
 print(f'{num=:#E} {num=:#F} {num=:#G}')
 print(f'{num=:#n} {num=:#f} {num=:#d}')
-print(f'{num=!s:#s} {num=:#f} {num=:#d}')
+print(f'{num=!s:s} {num=:#f} {num=:#d}')
+print(f'{num!s:s} {num:#f} {num:#d}')
 
 # The '#' option is only valid for integers, and only for binary, octal, or hexadecimal output. If present, it specifies that the output will be prefixed by '0b', '0o', or '0x', respectively.
 
 #%%
+num=123
+print(f'{num=:06d} {num=:+0d} {num=:#o}')
 # https://docs.python.org/2/library/string.html#format-specification-mini-language
 # format_spec ::=  [[fill]align][sign][#][0][width][,][.precision][type]
 # fill        ::=  <any character>
@@ -17,8 +20,10 @@ print(f'{num=!s:#s} {num=:#f} {num=:#d}')
 # width       ::=  integer
 # precision   ::=  integer
 # type        ::=  "b" | "c" | "d" | "e" | "E" | "f" | "F" | "g" | "G" | "n" | "o" | "s" | "x" | "X" | "%"
-# The '#' option is only valid for integers, and only for binary, octal, or hexadecimal output. If present, it specifies that the output will be prefixed by '0b', '0o', or '0x', respectively.
-# When no explicit alignment is given, preceding the width field by a zero ('0') character enables sign-aware zero-padding for numeric types. This is equivalent to a fill character of '0' with an alignment type of '='.
+# The '#' option is only valid for integers, and only for binary, octal, or hexadecimal output. If present,
+# it specifies that the output will be prefixed by '0b', '0o', or '0x', respectively.
+# When no explicit alignment is given, preceding the width field by a zero ('0') character enables sign-aware
+# zero-padding for numeric types. This is equivalent to a fill character of '0' with an alignment type of '='.
 
 # https://docs.python.org/3/library/string.html
 # replacement_field ::=  "{" [field_name] ["!" conversion] [":" format_spec] "}"
