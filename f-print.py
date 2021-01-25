@@ -12,7 +12,7 @@ print(f'{num!s:s} {num:#f} {num:#d}')
 #%%
 num=123
 print(f'{num=:06d} {num=:+0d} {num=:#o}')
-# https://docs.python.org/2/library/string.html#format-specification-mini-language
+# https://docs.python.org/3/library/string.html
 # format_spec ::=  [[fill]align][sign][#][0][width][,][.precision][type]
 # fill        ::=  <any character>
 # align       ::=  "<" | ">" | "=" | "^"
@@ -25,7 +25,6 @@ print(f'{num=:06d} {num=:+0d} {num=:#o}')
 # When no explicit alignment is given, preceding the width field by a zero ('0') character enables sign-aware
 # zero-padding for numeric types. This is equivalent to a fill character of '0' with an alignment type of '='.
 
-# https://docs.python.org/3/library/string.html
 # replacement_field ::=  "{" [field_name] ["!" conversion] [":" format_spec] "}"
 # field_name        ::=  arg_name ("." attribute_name | "[" element_index "]")*
 # arg_name          ::=  [identifier | digit+]
