@@ -54,4 +54,26 @@ print(f'{a=:@^#025,.6f}\n')
 print(f'{a=:^#025,.2f}')
 print(f'{a=:<#025,.2f}')
 print(f'{a=:>#025,.2f}')
+
+# https://docs.python.org/3/library/string.html
+# %%
+from string import Template
+s = Template('$who likes $what')
+str=s.substitute(who='tim', what='kung pao')
+print(str)
+# 'tim likes kung pao'
+d = dict(who='tim',what='$100')
+Template('Give $who $100').substitute(d)
+# Traceback (most recent call last):
+# ...
+# ValueError: Invalid placeholder in string: line 1, col 11
+str=Template('$who likes $what').substitute(d)
+print(str)
+# Traceback (most recent call last):
+# ...
+# KeyError: 'what'
+str=Template('$who likes $what').safe_substitute(d)
+print(str)
+# 'tim likes $what'
+
 # %%
